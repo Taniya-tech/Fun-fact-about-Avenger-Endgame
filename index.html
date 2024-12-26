@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact Generator - Avengers: Endgame</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            background-image: url('https://wallpapers.com/images/featured/avengers-endgame-mghdp4gaqzu4q4us.jpg'); /* Updated image URL */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(40, 44, 52, 0.8); /* Semi-transparent background for better readability */
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4757;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff6b81;
+        }
+
+        #fact-display {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Fact Generator</h1>
+        <button id="generate-fact">Generate Fun Fact</button>
+        <p id="fact-display"></p>
+    </div>
+    <script>
+        const facts = [
+            "Highest-grossing film of all time shortly after release.",
+            "Time travel inspired by 'Back to the Future.'",
+            "Features the original six Avengers.",
+            "Directors Anthony and Joe Russo make a cameo.",
+            "Robert Downey Jr. improvised 'I am Iron Man.'",
+            "The Quantum Realm is key to time travel.",
+            "Hawkeye becomes Ronin.",
+            "Female superheroes unite in the final battle.",
+            "Revisits all six Infinity Stones.",
+            "Farewell to Iron Man and Captain America."
+        ];
+
+        document.getElementById('generate-fact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact-display').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
